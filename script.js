@@ -36,11 +36,11 @@ addBtn.addEventListener('click', () => {
     const genre = movieGenreInput.value;
 
     if (title && genre) {
-        alert('تمت إضافة فيلم: ${title} بنجاح!');
+        alert('Movie: "${title}" added successfully!');
         // هنا يمكنك لاحقاً إضافة الكود الذي يضع الفيلم في المصفوفة
         movieTitleInput.value = '';
         movieGenreInput.value = '';
     } else {
-        alert('يرجى ملء جميع الحقول!');
+        alert('Please fill in all fields!');
     }
 });
