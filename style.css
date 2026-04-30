@@ -38,10 +38,11 @@ body {
 h1 {
     font-size: 2.2rem;
     margin-bottom: 10px;
-    background: linear-gradient(to right, #ff416c, #ff4b2b);
-    -webkit-text-fill-color: transparent;
+    color: #913e6a !important; /* لون زهري ماروني غامق ليظهر بوضوح */
+    background: none; /* ألغينا التدرج الشفاف */
+    -webkit-text-fill-color: initial; /* أعدنا اللون الأصلي للخط */
+    display: block !important;
 }
-
 p {
     color: #ccc;
     font-size: 0.9rem;
@@ -53,7 +54,7 @@ p {
     padding: 25px;
     border-radius: 16px;
     margin-bottom: 30px;
-    border: 1px solid rgba(233, 69, 96, 0.3);
+    border: 1px solid rgba(208, 179, 200, 0.448);
     min-height: 120px;
     display: flex;
     flex-direction: column;
@@ -69,13 +70,13 @@ p {
 
 #movie-genre {
     font-size: 1rem;
-    color: #e94560;
+    color: #f8bbd0;
     font-weight: 400;
 }
 
 
 button {
-    background: linear-gradient(45deg, #e94560, #ff416c);
+    background: linear-gradient(45deg, #f48fb1, #f8bbd0);
     color: white;
     border: none;
     padding: 15px 30px;
@@ -83,14 +84,14 @@ button {
     font-weight: 600;
     border-radius: 12px;
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(233, 69, 96, 0.4);
+    box-shadow: 0 4px 15px rgba(247, 134, 202, 0.4);
     transition: all 0.3s ease;
     width: 100%;
 }
 
 button:hover {
     transform: scale(1.02);
-    box-shadow: 0 6px 20px rgba(233, 69, 96, 0.6);
+    box-shadow: 0 6px 20px rgba(247, 134, 202, 0.4);
     filter: brightness(1.1);
 }
 
@@ -103,12 +104,12 @@ footer {
     margin-top: 30px;
     font-size: 0.75rem;
     color: #888;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(247, 134, 202, 0.4);
     padding-top: 15px;
 }
 
 footer b {
-    color: #e94560;
+    color: #f48fb1;
 }
 /* تنسيقات مهمة فاطمة دياب SS-17 */
 .add-movie-section {
@@ -119,7 +120,7 @@ footer b {
 }
 
 .add-movie-section h3 {
-    color: #333;
+    color: #fce4ec;
     margin-bottom: 15px;
 }
 
@@ -132,21 +133,21 @@ footer b {
 }
 
 .add-movie-section input {
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 12px;
+    border: 1px solid #f8bbd0;
+    border-radius: 8px;
 }
 
 #add-btn {
-    padding: 10px;
-    background-color: #28a745;
+    padding: 12px;
+    background-color: #f8bbd0;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-weight: bold;
 }
 
 #add-btn:hover {
-    background-color: #218838;
+    background-color: #f48fb1;
 }
