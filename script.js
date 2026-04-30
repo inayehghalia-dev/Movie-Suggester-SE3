@@ -26,3 +26,21 @@ function getRandomMovie() {
 
 suggestBtn.addEventListener('click', getRandomMovie);
 anotherBtn.addEventListener('click', getRandomMovie);
+// برمجة إضافة الأفلام - مهمة فاطمة دياب SS-17
+const addBtn = document.getElementById('add-btn');
+const movieTitleInput = document.getElementById('new-movie-title');
+const movieGenreInput = document.getElementById('new-movie-genre');
+
+addBtn.addEventListener('click', () => {
+    const title = movieTitleInput.value;
+    const genre = movieGenreInput.value;
+
+    if (title && genre) {
+        alert('تمت إضافة فيلم: ${title} بنجاح!');
+        // هنا يمكنك لاحقاً إضافة الكود الذي يضع الفيلم في المصفوفة
+        movieTitleInput.value = '';
+        movieGenreInput.value = '';
+    } else {
+        alert('يرجى ملء جميع الحقول!');
+    }
+});
