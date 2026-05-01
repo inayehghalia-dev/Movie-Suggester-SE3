@@ -44,3 +44,4 @@ addBtn.addEventListener('click', () => {
         alert('Please fill in all fields!');
     }
 });
+// Functionality for SS-2: Suggest Another One button is now active.
