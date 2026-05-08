@@ -1,6 +1,6 @@
 
 
-test('SS-1: Random Movie Suggestion', () => {
+test('SS-1: should return a movie name when random selection is triggered', () => {
   const moviesList = ["Inception", "Interstellar", "The Dark Knight"];
   
   
