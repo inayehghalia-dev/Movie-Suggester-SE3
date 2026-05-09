@@ -45,6 +45,7 @@ function addMovie() {
     } else {
         return false; // للفشل
     }
+ feature/SS-17-add-movies
 }
 
 const addBtn = document.getElementById('add-btn');
@@ -63,3 +64,7 @@ if (addBtn) {
 if (typeof module !== 'undefined') {
     module.exports = { addMovie, movies };
 }
+
+});
+// Functionality for SS-2: Suggest Another One button is now active.
+ main
