@@ -1,0 +1,13 @@
+{
+  "name": "movie-suggester",
+  "version": "1.0.0",
+  "description": "Movie Suggester Project for SE3",
+  "main": "script.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "jest-environment-jsdom": "^29.0.0"
+  }
+}

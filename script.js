@@ -1,4 +1,3 @@
-
 const movies = [
     { title: "Inception", genre: "Sci-Fi" },
     { title: "The Dark Knight", genre: "Action" },
@@ -16,31 +15,51 @@ function getRandomMovie() {
     const randomIndex = Math.floor(Math.random() * movies.length);
     const selectedMovie = movies[randomIndex];
     
-    movieTitle.innerText = selectedMovie.title;
-    movieGenre.innerText = "Genre: " + selectedMovie.genre;
+    if (movieTitle) movieTitle.innerText = selectedMovie.title;
+    if (movieGenre) movieGenre.innerText = "Genre: " + selectedMovie.genre;
     
-    
-    anotherBtn.style.display = "inline-block";
-    suggestBtn.style.display = "none";
+    if (anotherBtn) anotherBtn.style.display = "inline-block";
+    if (suggestBtn) suggestBtn.style.display = "none";
 }
 
-suggestBtn.addEventListener('click', getRandomMovie);
-anotherBtn.addEventListener('click', getRandomMovie);
-// برمجة إضافة الأفلام - مهمة فاطمة دياب SS-17
-const addBtn = document.getElementById('add-btn');
-const movieTitleInput = document.getElementById('new-movie-title');
-const movieGenreInput = document.getElementById('new-movie-genre');
+if (suggestBtn) suggestBtn.addEventListener('click', getRandomMovie);
+if (anotherBtn) anotherBtn.addEventListener('click', getRandomMovie);
 
-addBtn.addEventListener('click', () => {
+// --- مهمة فاطمة دياب SS-17 (تعديل بسيط ليقبل الاختبار) ---
+
+function addMovie() {
+    const movieTitleInput = document.getElementById('new-movie-title');
+    const movieGenreInput = document.getElementById('new-movie-genre');
+
     const title = movieTitleInput.value;
     const genre = movieGenreInput.value;
 
     if (title && genre) {
-        alert('Movie: ' + title + ' added successfully!');
-        // هنا يمكنك لاحقاً إضافة الكود الذي يضع الفيلم في المصفوفة
+        // إضافة الفيلم للمصفوفة (عشان الاختبار يتأكد إنه انضاف)
+        movies.push({ title: title, genre: genre });
+        
+        // مسح الحقول بعد الإضافة
         movieTitleInput.value = '';
         movieGenreInput.value = '';
+        return true; // للنجاح
     } else {
-        alert('Please fill in all fields!');
+        return false; // للفشل
     }
-});
+}
+
+const addBtn = document.getElementById('add-btn');
+if (addBtn) {
+    addBtn.addEventListener('click', () => {
+        const result = addMovie();
+        if (result) {
+            alert('Movie added successfully!');
+        } else {
+            alert('Please fill in all fields!');
+        }
+    });
+}
+
+// --- تصدير الدالة للاختبار (مهم جداً) ---
+if (typeof module !== 'undefined') {
+    module.exports = { addMovie, movies };
+}
